@@ -26,29 +26,6 @@ for i in student:
     print(i, '-', student[i])'''
 
 
-'''num = int(input('Введите число: '))
+num = int(input('Введите число: '))
 dictt = {i: i**2 for i in range(1, num+1)}
-print(dictt)'''
-
-'''count = 0
-contacts = dict()
-while count < 10:
-    print('Текущие контакты на телефоне:')
-    for i in contacts:
-        print(i, '-', contacts[i])
-    contacts[input('Введите имя: ' )] = int(input('Введите номер телефона: '))
-    count += 1'''
-
-count = 0
-contacts = dict()
-while count < 10:
-    print('Текущие контакты на телефоне:')
-    for i in contacts:
-        print(i, '-', contacts[i])
-    k = input('Введите имя: ')
-    if k in contacts:
-        print('Ошибка: такое имя уже существует.')
-        continue
-    v = input('Введите номер телефона: ')
-    contacts[k] = v
-    count += 1
+print(dictt)
