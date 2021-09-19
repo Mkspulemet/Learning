@@ -28,4 +28,8 @@ for i in student:
 
 num = int(input('Введите число: '))
 dictt = {i: i**2 for i in range(1, num+1)}
+<<<<<<< HEAD
 print(dictt)
+=======
+print(dictt)
+>>>>>>> added
