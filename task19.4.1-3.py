@@ -35,3 +35,7 @@ print()
 print('Объединение множеств:', *nums1 | nums2)
 print('Пересечение множеств:', *nums1 & nums2)
 print('Элементы, входящие в nums_2, но не входящие в nums_1: ', *nums2 - nums1)'''
+
+'''numbers = set('0123456789')
+word = input('Введите текст с цифрами: ')
+print('Различные цифры строки: ', *sorted(list(numbers.intersection(set(word)))))'''
