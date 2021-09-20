@@ -57,7 +57,7 @@ team_a_members = [
 ]
 print(team_a_members)'''
 
-family_member = {
+'''family_member = {
     'name': 'Jane',
     'surname': 'Doe',
     'hobbies': {'running', 'sky diving', 'singing'},
@@ -70,4 +70,4 @@ family_member = {
 name1 = family_member.get('children', {}).get(2, {}).get('name')
 if name1 == 'Bob':
     print('Есть тако е имя')
-print(family_member.get('children', {}).get(2, {}).get('name'))
+print(family_member.get('children', {}).get(2, {}).get('name'))'''
