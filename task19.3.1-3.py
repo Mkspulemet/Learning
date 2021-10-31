@@ -39,8 +39,8 @@ data['configuration'] = {
     }
 }
 print(data)'''
-
-'''plauers_dict = {
+'''
+plauers_dict = {
     1: {'name': 'Ваня', 'team': 'A', 'status': 'Rest'},
     2: {'name': 'Лена', 'team': 'B', 'status': 'Training'},
     3: {'name': 'Толик', 'team': 'C', 'status': 'Travel'},

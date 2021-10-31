@@ -70,7 +70,7 @@ print('Самый маленький доход у', min(incomes, key=incomes.ge
 
 
 #Гистограмма
-def histogram(string):
+'''def histogram(string):
     sym_dict = dict()
     for sym in string:
         if sym in sym_dict:
@@ -84,4 +84,20 @@ hist = histogram(text)
 for i_sym in sorted(hist.keys()):
     print(i_sym, ':', hist[i_sym])
 
-print('Максимальная частота:', max(hist.values()))
+print('Максимальная частота:', max(hist.values()))'''
+
+'''import os
+folder_name = 'project'
+file_name = 'admin.bat'
+rel_path = os.path.join('docs', folder_name, file_name)
+print(rel_path)
+abs_path = os.path.abspath(file_name)
+print(abs_path)'''
+
+try:
+    numbers_file = open('numbers.txt', 'r')
+    for i_line in numbers_file:
+        print(i_line, end='')
+    numbers_file.close()
+except FileNotFoundError:
+    print('Такого файла не существует')
