@@ -93,11 +93,3 @@ rel_path = os.path.join('docs', folder_name, file_name)
 print(rel_path)
 abs_path = os.path.abspath(file_name)
 print(abs_path)'''
-
-try:
-    numbers_file = open('numbers.txt', 'r')
-    for i_line in numbers_file:
-        print(i_line, end='')
-    numbers_file.close()
-except FileNotFoundError:
-    print('Такого файла не существует')
