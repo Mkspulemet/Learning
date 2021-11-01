@@ -38,3 +38,27 @@ try:
     print('Общая сумма: ', total)
 except ZeroDivisionError:
     print('На ноль делить нельзя!')
+answer_file = open('answer.txt', 'w')
+try:
+    answer_file.write('The answer is: ')
+    answer_file.write(str(total))
+except TypeError:
+    print('Ошибка записи в файлю Тип данных не строка.')
+else:
+    print('Программа выполнилась без ошибок')
+finally:
+    answer_file.close()
+    print(answer_file.closed)
+
+'''BRUCE_WILLIS = 42
+
+
+
+input_data = input('Введите строку: ')
+
+leeloo = int(input_data[4])
+
+result = BRUCE_WILLIS * leeloo
+
+print(f'- Leeloo Dallas! Multi-pass № {result}!')'''
+
