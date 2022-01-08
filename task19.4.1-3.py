@@ -3,9 +3,9 @@ num_list = [random.randint(1, 4) for _ in range(1, 10)]
 num_list1 = set(num_list)
 print(num_list1)'''
 
-'''signs = set(".,;:!?")
+signs = set(".,;:!?")
 word = 'Я! Есть. Грут?! Я, Грут и Есть.'
-print('Количество знаков пунктуации: ', len(signs.intersection(set(word))))'''
+print('Количество знаков пунктуации: ', len(signs.intersection(set(word))))
 
 '''import  random
 nums_1 = [29, 17, 10, 15, 13, 22, 12, 22, 7, 24,
