@@ -60,6 +60,7 @@ def history(message):
 def start(m, res=False):
     bot.send_message(m.chat.id, 'Отправьте мне любое слово, и я найду его значение на Wikipedia')
 
+
 # Функция, обрабатывающая команду /history
 @bot.message_handler(commands=["history"])
 def history_out(message, res=False):
