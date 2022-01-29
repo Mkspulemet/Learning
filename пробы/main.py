@@ -68,7 +68,6 @@ def history_out(message, res=False):
     for i in Person.select().where(Person.name == id):
         print(i)
         bot.send_message(message.chat.id, i.mess)
-        # bot.send_message(message.chat.id, Person.mess)
 
 
 # Получение сообщений от юзера
