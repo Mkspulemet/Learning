@@ -1,9 +1,4 @@
 import telebot, wikipedia, re
-from testing import *
-
-db.connect()
-Person.create_table(True)
-db.close()
 
 # Создаем экземпляр бота
 bot = telebot.TeleBot('5056695729:AAEFCytVriAqwrskJaFYKgWqs0H1nXRs2vE')
@@ -42,44 +37,16 @@ def getwiki(s):
         return 'В энциклопедии нет информации об этом'
 
 
-def history(message):
-    db.connect()
-    user = Person.create(name=int(message.from_user.id), mess=getwiki(message.text))
-    user.save()
-    # if not Person.select().where(Person(name=int(message.from_user.id), mess=getwiki(message.text))):
-    #     new_user = Person.create(
-    #         name=message.from_user.id,
-    #         mess=getwiki(message.text),
-    #     )
-    #     new_user.save()
-    db.close()
-
-
 # Функция, обрабатывающая команду /start
 @bot.message_handler(commands=["start"])
 def start(m, res=False):
     bot.send_message(m.chat.id, 'Отправьте мне любое слово, и я найду его значение на Wikipedia')
-
-# Функция, обрабатывающая команду /history
-@bot.message_handler(commands=["history"])
-def history_out(message, res=False):
-    id = message.from_user.id
-    for i in Person.select().where(Person.name == id):
-        print(i)
-        bot.send_message(message.chat.id, i.mess)
-        # bot.send_message(message.chat.id, Person.mess)
 
 
 # Получение сообщений от юзера
 @bot.message_handler(content_types=["text"])
 def handle_text(message):
     bot.send_message(message.chat.id, getwiki(message.text))
-    # history(getwiki(message.text))
-    # db.connect()
-    # new_user = Person.create(name=int(message.from_user.id), mess=getwiki(message.text))
-    # new_user.save()
-    history(message)
-    print(message.from_user.id)
 
 
 # Запускаем бота
