@@ -84,3 +84,5 @@ def handle_text(message):
 
 # Запускаем бота
 bot.polling(none_stop=True, interval=0)
+
+
