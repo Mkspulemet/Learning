@@ -11,6 +11,7 @@ bot = telebot.TeleBot('5056695729:AAEFCytVriAqwrskJaFYKgWqs0H1nXRs2vE')
 wikipedia.set_lang("ru")
 
 
+
 # Чистим текст статьи в Wikipedia и ограничиваем его тысячей символов
 def getwiki(s):
     try:
@@ -46,12 +47,6 @@ def history(message):
     db.connect()
     user = Person.create(name=int(message.from_user.id), mess=getwiki(message.text))
     user.save()
-    # if not Person.select().where(Person(name=int(message.from_user.id), mess=getwiki(message.text))):
-    #     new_user = Person.create(
-    #         name=message.from_user.id,
-    #         mess=getwiki(message.text),
-    #     )
-    #     new_user.save()
     db.close()
 
 
@@ -74,10 +69,6 @@ def history_out(message, res=False):
 @bot.message_handler(content_types=["text"])
 def handle_text(message):
     bot.send_message(message.chat.id, getwiki(message.text))
-    # history(getwiki(message.text))
-    # db.connect()
-    # new_user = Person.create(name=int(message.from_user.id), mess=getwiki(message.text))
-    # new_user.save()
     history(message)
     print(message.from_user.id)
 
